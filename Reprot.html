@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                background-color: rgb(252, 249, 233);
+                padding: 10px 20px;
+            }
+            h1   {color: blue;}
+            p    {margin-left: 50px;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Web Development Final Report</h1> 
+        <h3>Student number: 210103328</h3>
+        
+        This report aims to inform the reader about all aspects regarding the website TechUP. The website is a 
+        news-like website aimed at technology enthusiasts and intends to enable a similar community chat mechanisms 
+        as Stack-overflow or Reddit. The Homepage will display reviews of the news articles. These previews then 
+        link to the articles for in-depth reading and a discussion of thoughts at the end. As mentioned, the target 
+        audience is the tech community. Providing discussion material for all technology related categories. The 
+        discussion material will be written by verified and well-informed sources, this aims to prevent false news 
+        and the like. 
+        
+        <h2>Inspiration</h2> 
+        
+        As the author of this website, I was primarily inspired by my love for the tech world and its wide range 
+        of categories. Sine we are tasked with a news website, I took inspiration from the short tech news videos 
+        found on YouTube. Examples include the channel TechLinked or Gamers Nexus . I wanted to provide relevant 
+        news and enable a community like discussion on the topics at hand. That is where the communities of stack 
+        overflow and reddit inspired me. And so, TechUP was born. 
+        
+        <h2>Accessibility</h2>
+        
+        To ensure the enjoyment of all TechUP users. The site incorporates three accessibility aids. 
+        <br> <br>
+        First, a option to change the text size of the entire website. This empowers the user to adjust 
+        according to reading or navigating comfort. The options include small, aimed to increase readability 
+        on odd sized devises. Next is the default medium sized option with a comfortable text size and finally 
+        a large text size to assist with visual or literate impaired individuals. As a result of this text changing 
+        effort, the site took minor artistic defects. 
+        <br> <br>
+        Second, aid is a change in contrast. This feature switches between a colourful site and text to a grey 
+        scale site. This drastically increases the contrast and helps the reader. 
+        <br> <br>
+        Finally, the focus highlighter. This feature toggles the tab selector to a thick and red outlined selector 
+        or resets it to the default thin and grey selector. This will aid with navigating the web page with the tab 
+        button.
+        
+        <h2>Usability</h2> 
+        
+        No site is popular without an excellent layout for ease of use. TechUp aims to achieve this by keeping a 
+        classic and intuitive website structure, so people don’t have to study the layout and search for 
+        functionality, everything is where they are used to having it. Next, we have adequate use of white space. 
+        Elements on a page that need attention will get it by means of surrounding it with sufficient nothingness. 
+        Finally, the site is designed to never have too much information or elements focused in one area. Allowing 
+        a comfortable reading flow, everything relevant is grouped and well organised. 
+        
+        <h2>My learnings</h2>
+        
+        First and foremost, I’d like to credit W3Schools’ documentation and explanations. I spend a lot of time on 
+        that website looking for new features, understanding them and figuring out why my code does not do as I need 
+        it to. Especially with CSS and JS where the parameter combination or sequence is essential. 
+        From that site I also learned the use of CSS variables and how to manipulate then with JS. This made the core 
+        of the accessibility features. Also, the CSS background-blend ability. It helped a lot with correcting the 
+        background image contrast to the foreground text.
+        <br> <br>
+        To use Handlebars to the fullest I studied a YouTube series by Mr. Finelli. In it he explained the fundamental 
+        mechanics that allow extensive templating. I drew inspiration from his approach to use handlebars to generate 
+        near limitless websites with only a database. He also showed a slightly different approach to render the 
+        templates than what we were shown in class. Note, I could not copy his code since he implemented his with 
+        JQuirey and my functionality drastically differs from his. All I did was copy his idea to template pages. 
+        I used the class examples to get started and fundamentally adapted it from there.
+        
+        
+        <h2>Good aspects</h2> 
+        
+        Things I think really worked well are the following. 
+        The fundamental incorporation of handlebars. The way its functionality is built into the website allows for 
+        several unique features. First, custom HTML. Since HTML code first gets compiled and then rendered means that 
+        we can use the input data to uniquely identify content by using the data’s ID values. For example: the CSS IDs 
+        and classes have values depending on its location in the database or passing custom values to the JS function 
+        calls. This ability is the core to a templating approach that enables near limitless web pages that can be 
+        generated with JS, Handlebars and the JSON database. As a matter of fact, with a few modifications to the 
+        website code will it be possible to have as many article pages and article previews as there are database 
+        entries. I really like this approach, let the computer do all the work for us. Unfortunately, due to the time 
+        limit and project requirements, I was not able to fully implement such functionality. 
+        <br> <br>
+        Another thing that works well is how the comments get rendered on the article pages. The JSON database has a 
+        nested comment structure and to ensure all comments get rendered I build a recursive function that obtains all 
+        comments regardless of how deep they are nested. It uses handlebars to compile each comment individually and 
+        adds the custom compiled code to a string variable. This string variable will then be used to populate the HTML. 
+        <br> <br>
+        Finally, the article preview scroll. On the home page we have a preview of all articles. When one hovers over 
+        the article text it will slowly scroll up and show the main article text. At the end of the article the scroll 
+        will stop. Then the user can either preview the next article, in which case the text locations will be reset 
+        and ready for the next run. Or click on the article to go to the full article page. 
+        
+        <h2>Bad aspects and to improve</h2>
+        
+        Unfortunately, I could not spend enough time on CSS responsiveness. The site is responsive but not as much 
+        as I’d hope to achieve. CSS not as straight forward as I hoped. After all there is a reason for all the CSS 
+        memes. Also, I should have gone all in on the em unit approach, as shown in a webinar, or stick to the relative 
+        unit approach from the start. 
+        <br> <br>
+        Another thing I wish to improve next time is better planning to incorporate accessibility features. 
+        The change in text size gives me headaches with certain screen sizes.
+        <br> <br>
+        Ultimately, the good old problem of running time. The more time the better the functionality and content 
+        of the website. Even though I am satisfied with the final result and time planning. There remain a few 
+        features I wish to improve or add to have the website resemble the real counterparts. 
+        
+        <h2>References</h2> 
+
+        <h3>Sources</h3>
+        Access menu drop down: 
+	    <p> W3Schools.com, "How TO - Clickable Dropdown", -. [online]. Available:
+             https://www.w3schools.com/howto/howto_js_dropdown.asp. [accessed 3-08-2022] </p>
+        JS animation
+        <p> W3Schools.com, "How TO - JavaScript HTML Animations", -. [online]. 
+            Available: https://www.w3schools.com/howto/howto_js_animate.asp. [accessed 4-08-2022] </p>
+        Handlebars
+        <p> Handlebarsjs.com, 'Handlebars Reference', 2021. [Online]. Available:
+        http://handlebarsjs.com/guide/ [Accessed: 11-08-2022] </p>
+        Only for guidance, no coping
+        <p> R., Finelli, "Handlebars Training", 2016. [tutorial]. 
+            Available: https://www.youtube.com/watch?v=2sXjmewEQOY&list=PLtV5RF44Yj8S4RcpQehL-2XMuVsJXwNvK [Accessed: 11-08-2022] </p>
+        <p> R., Finelli, "Handlebars-course", 2016. [tutorial]. 
+            Available: https://bitbucket.org/richfinelli/handlebars-course/src/master/ [Accessed: 11-08-2022]</p>
+
+        Images: <br>
+	    <p>AMD_vs_Intel gadgetmandu.com, https://www.gadgetmandu.com/2020/05/07/intel-vs-amd-gaming/ [accessed 12-08-2022] </p>
+	    <p>GPU price chart tech4gamers.com, https://tech4gamers.com/gpu-prices-expected-to-drop-in-3-years/#:~:text=Recently%2C%20it%20has%20been%20reported%20that%20the%20cost,price%20of%20graphics%20cards%20will%20plummet%20by%208-12%25 [Accessed 16-08-2022] </p>
+        <p>RTX 3090 Wallpaper www.nvidia.com, https://www.nvidia.com/en-us/geforce/community/wallpapers/#rtx-3090-wallpapers [accessed 16-08-2022]</p>
+        All other images come from:
+        <p>https://wallpaperaccess.com</p>
+        Icons: <br>
+        These are two sets I partly used
+        <p> IconsMind, "Line", 2014, (Linkware) [online], Available: https://iconarchive.com/artist/iconsmind.html [accessed 11-08-2022] </p>
+        <p>Link to IconsMind website  http://www.iconsmind.com</p>
+	    <p>Icons8, "iOS 7", 2014, (Linkware) [online] Available:
+             https://iconarchive.com/show/ios7-icons-by-icons8.html [accessed 11-08-2022] </p>
+        <p> Link to Icons8 website http://icons8.com </p>
+
+        Logo: <br> 
+        Logo was created with the Key word "T U" and a generated image was downloaded
+	    <p> brandcrowd.com, [online] https://www.brandcrowd.com/ Generation link: https://www.brandcrowd.com/maker/logos?text=T%20U&searchText=T%20U 
+            [accessed 16-08-2022] </p>
+        
+        Import JSON
+        <p> Marconymous, "Import a local JSON using JavaScript", 2021, [comment] Available:
+             https://stackoverflow.com/questions/67734739/import-a-local-json-using-javascript [accessed 12-08-2022] </p>
+	
+        Article text 
+        <p>AMD vs Intel: P., Alcorn, "AMD vs Intel: Which CPUs Are Better in 2022?", 2022, Available:
+             https://www.tomshardware.com/features/amd-vs-intel-cpus [accessed 29-08-2022] </p>
+        <p>GPU prices: J., Walton, "Most GPUs Now Start Below MSRP: Graphics Card Prices, August 2022", 2022, Available: 
+            https://www.tomshardware.com/news/graphics-card-prices-august-2022 [accessed 9-08-2022]</p>
+        <p>Zero day; V., Petkauskas, "Gods of cyberwar: the booming of an unregulated zero-day industry", 2021, Available: 
+	        https://cybernews.com/security/gods-of-cyberwar-the-booming-of-an-unregulated-zero-day-industry/ [accessed 29-08-2022] </p>
+        
+        <h3>Tools used</h3> 
+        Contrast checker 
+        <p>https://contrastchecker.com/</p>
+        HTML Validator
+        <p>https://validator.w3.org</p>
+        VS Code
+        <p>https://code.visualstudio.com/Download</p>
+
+        <h2>Appendices:</h2> 
+        <h3>Site Map </h3>
+        <img src="Site-map.jpg" width="75%" height="auto">
+
+        <h3>Wireframes</h3> 
+        <br>
+        <img src="Wireframes/Home-page-wireframe.jpg" width="75%" height="auto"> <br>
+        <img src="Wireframes/About-pages-wireframe.jpg" width="50%" height="auto">
+
+        <h3>Mockups </h3> 
+        In a webinar I was told screen shots will suffice
+        <h4>Home Desktop</h4>
+        <img src="Mockups/home-desktop-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-desktop-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-desktop-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-desktop-4.jpg" width="75%" height="auto"> <br>
+        <h4>Home Tablet</h4>
+        <img src="Mockups/home-tablet-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-tablet-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-tablet-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-tablet-4.jpg" width="75%" height="auto"> <br>
+        <h4>Home Mobile</h4>
+        <img src="Mockups/home-mobile-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-mobile-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-mobile-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/home-mobile-4.jpg" width="75%" height="auto"> <br>
+        <br> <br> 
+        <h4>Article page desktop</h4>
+        <img src="Mockups/article-desktop-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-desktop-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-desktop-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-desktop-4.jpg" width="75%" height="auto"> <br>
+        <h4>Article page tablet</h4>
+        <img src="Mockups/article-tablet-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-tablet-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-tablet-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-tablet-4.jpg" width="75%" height="auto"> <br>
+        <h4>Article page mobile</h4>
+        <img src="Mockups/article-mobile-1.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-mobile-2.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-mobile-3.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/article-mobile-4.jpg" width="75%" height="auto"> <br>
+        <br> <br> 
+        <h4>About Desktop and Tablet</h4>
+        <img src="Mockups/about-desktop.jpg" width="75%" height="auto"> <br>
+        <img src="Mockups/about-modile.jpg" width="75%" height="auto"> <br>
+    </body>
+</html>
+

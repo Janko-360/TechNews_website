@@ -1,0 +1,830 @@
+
+/* ---------- General styling ---------- */
+/* setting the font type and removing the margin */
+body {
+    margin: 0px;
+    font-family: Verdana, Arial, Georgia, Times, sans-serif;
+}
+
+/* setting the style for all headings */
+h1, h2, h3, h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+/* https://stackoverflow.com/questions/2225585/how-to-change-a-div-padding-without-affecting-the-width-height comment by adswebwork  accessed 15-08-2022 */
+/* Eleiminate buggy padding and margine behaviour */
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+/* Declare CSS variables at root level */
+:root {
+    /* Variables used in accessibility for changing the focus hilight */
+    --focus-colour: rgb(104, 104, 226); 
+    --focus-size: 0.15em;
+    /* variables used in changing the theme: normal, high-contrast, gery-scale */
+    --font-colour-primary: rgb(255, 255, 255);
+    --font-colour-secondary: rgb(0, 0, 0);
+    --background-primary: rgb(0, 0, 210);
+    --background-secondary: rgb(240, 240, 240);
+    --background-tertiary:  rgb(160, 160, 160);
+  }
+
+/* setting the focus values with CSS variables so I can change it with the access menu and JS */
+:focus {
+    outline: var(--focus-size) solid var(--focus-colour);
+}
+
+
+/* ---------- Header and nav styling ---------- */
+header {
+    background-color: var(--background-primary);
+    font-size: 1.5em;
+}
+
+header h1, header p {
+    color: var(--font-colour-primary);
+}
+
+#logo-link {
+    width: 2.5em;
+    border-radius: 0.25em;
+    position: relative;
+    top: -20px;
+    margin-bottom: -20px;
+}
+
+/* Nav bar---------- */
+nav div {
+    /* Space for all elements in the nav */
+    color: var(--font-colour-primary);
+    margin: 1rem 1rem;
+}
+
+nav a {
+    color: var(--font-colour-primary);
+    text-decoration: none;
+}
+
+/* set a response when we want to select something */
+nav a:hover, button:hover {
+    color: rgb(145, 145, 145);
+    text-decoration: underline;
+    text-decoration-color: rgb(145, 145, 145);
+}
+
+/* Setting all the content of the nav bar as a flexbox and customising */
+.nav-class {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0em;
+    padding-top: 1.5em;
+    margin: 0 0;
+}
+
+/* styling the search box at the top center */
+#search-box {
+    /* setting some space around the search bar */
+    margin: 0.4em 10vw;
+    border-style: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    padding: 0.5em 0.9em;
+    font-size: 0.8em;
+}
+
+/* top hero space --------- */
+figure {
+    margin: 0px;
+}
+
+/* setting everything for the hero background */
+#hero-background {
+    /* The background image takes priority, shoud a error occur the backgroundcolour will be uesed. */
+    background-color: var(--background-primary);
+    background-image: url("../Media/home-herospace-resized.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-size: 2em;
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 15rem;
+}
+
+/* Accessibility Menu styling--- */
+.access-menu-dropdown {
+    float: right;
+    position: relative;
+}
+
+.drop-btn {
+    background-color: var(--background-primary);
+    border: none;
+    color: var(--font-colour-primary);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* style the elements in the dropdown box */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -15px;
+    background-color: var(--background-secondary);
+    min-width: 250px;
+    z-index: 1;
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    font-size: 0.8em;
+}
+
+/* enlarge the radio and check boxes */
+.dropdown-content input {
+    height: 25px;
+    width: 25px;
+}
+
+.text-radio {
+    margin-right: 25px;
+}
+
+/* set the drowdown content hidden if the access menu is not active */
+.show {display:block;}
+
+
+/* ---------- Content or page styling ---------- */
+#content-section{
+    padding: 30px 0px;
+    background-color: var(--background-secondary);    
+}
+
+#content-section article {
+    border-radius: 0.25em;
+    margin: 15px 100px;
+    padding: 10px 10px;
+}
+
+
+
+
+/* --------- Styling for all preview articles ---------- */
+div[id*="article-final"] {
+    width: 80%;
+    height: 400px;
+    /* trick to center the div */
+    margin: 100px auto;
+    border-radius: 0.25em;
+
+    /* For the possitioning of the meta-bar */
+    position: relative;
+
+    /* set teh properties of the background */
+    background-color: rgb(85, 85, 85);
+    /* a temporary background, this will be over written */
+    background-image: url("../Media/home-herospace-resized.jpg");
+    /* lightnes the background for better text contrast */
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* this div serves the sole purpose of enabeling the article scrol,
+    with out it the text will make things glitchy */
+div[id*="article-active-area"] {
+    /* set it above the others so the mouse will interact with this div */
+    z-index: 2;
+    /* give some space to the metadata bar */
+    width: 87%;
+    height: 100%;
+}
+
+/* individual article styling */
+.art-final-head {
+    /* absolute positioning for scroll effect */
+    position: absolute;
+    left: 0.6em;
+    padding-top: 6%;
+    /* preventing mouse interactions */
+    pointer-events: none;
+}
+
+.art-final-para {
+   /* absolute positioning for scroll effect */
+   position: absolute;
+   left: 1em;
+   bottom: 0px;
+   /* some space for the matadata bar */
+   padding-right: 15%;
+   padding-bottom: 11%;
+   /* preventing mouse interactions */
+   pointer-events: none;
+}
+
+.art-final-body {
+    /* absoloute positioning for scroll effect */
+    position: absolute;
+    left: 1em;
+    /* default possitioning to hide the article */
+    bottom: -1000px;
+    /* some space for the matadata bar */
+    padding-right: 15%;
+    /* preventing mouse interactions */
+    pointer-events: none;
+}
+
+/* some nice effects when we are hovering over the article, the use of the 
+   substring search is that all articles have different ids */
+div[id*="article-final"]:hover {
+    /* nice shadow */
+    box-shadow: 8px 8px 30px 5px rgb(100, 100, 100);
+    /* very importiant, shades the background even lighter for better text reading */
+    background-color:var(--background-tertiary);
+}
+
+/* styling used for the tabbing focus, the article div is the link to the 
+   articles them selves and divs dont wnat to get focused. This bypasses that problem  */
+div[id*="article-final"]:focus-within {
+    outline: var(--focus-size) solid var(--focus-colour);
+}
+
+/* Metadata bar styling ---------- */
+.meta-bar {
+    /* default: letting the whole bar alighn to the right of every article */
+    float: right;
+
+    /* Formatting for the conetnet of the meta-bar, aka all the data groups */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /* right possitioning of the bar */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    /* full height of the article preview */
+    height: 100%;
+    /* not full width of the article, aka 13% from the right */
+    width: 13%;
+
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+
+    background-color:var(--background-tertiary);
+    padding: 1em 1em;
+}
+
+/* styling and positioning the text (data labels) */
+.meta-bar p {
+    float: left;
+    padding-left: 0.5em;
+}
+
+/* Sizing and positioing of the data icons */
+.meta-bar img {
+    width: 2em;
+    float: left;
+}
+
+/* --------- Top thought comments ----------  */
+.top-chats {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.home-comment {
+    margin-left: 5vw;
+    margin-top: 0.1em;
+}
+
+
+/* ---------- Footer styling ---------- */
+/* General footer styling */
+footer {
+    background-color: var(--background-primary);
+    padding: 30px 20px;
+    padding-bottom: 5px;
+    column-count: 3;
+    column-rule: 1px solid rgb(139, 139, 139);
+    text-align: center;
+}
+
+/* text and link colouring */
+footer li, footer p {
+    color: var(--font-colour-primary);
+}
+
+footer li {
+    /*  removing the list item indicators */
+    list-style-type: none;
+    margin: 0.2em 0;
+}
+
+/* Removing the padding from the list to keep the alignment right */
+footer ul {
+    padding-left: 0;
+}
+
+/* letting the links blend into the footer */
+footer a {
+    color: var(--font-colour-primary);
+    text-decoration: none;
+}
+
+/* when we are over a link, let it show as selectible */
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(145, 145, 145);
+}
+
+footer h4 {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+/* styling the icon links */
+footer img {
+    width: 2em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.1em;
+    padding: 0.2em 0.2em;
+}
+
+#artist-info {
+    margin-top: 2em;
+}
+
+.legal-info {
+    column-span: all;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 3px 0;;
+}
+
+#copyright-para {
+    column-span: all;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 0.8em;
+}
+
+/* ---------- General Article page styling ---------- */
+#article-content-section {
+    background-color: var(--background-secondary);   
+    padding-bottom: 4em;
+}
+
+#article {
+    padding-top: 1em;
+    /* articel text takes 85% of the page width */
+    width: 85%;
+    /* left right margin trick for center alignment */
+    margin: 1em auto;
+}
+
+/* top center meata bar styling ---------- */
+.meta-bar-article-pages {
+    /* Formatting for the conetnet of the meta-bar */
+    display: flex;
+    justify-content: space-around;
+
+    width: 50%;
+    /* centering the bar with half the window width */
+    margin: 10px auto;
+
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+
+    background-color:var(--background-tertiary);
+    padding: 1em 1em;
+}
+
+/* styling the data labels */
+.meta-bar-article-pages p {
+    float: right;
+    margin-left: 0.2em;
+}
+
+/* sizing the icons */
+.meta-bar-article-pages img {
+    width: 2em;
+}
+
+/* Thought section styling ---------- */
+.thoughts {
+    /* thoughts section takes 75% of the page width */
+    width: 75%;
+    /* center alignment trick with the auto left right margin */
+    margin: 3em auto;
+}
+
+.thoughts h1 {
+    font-size: 1.5em;
+}
+
+/* styling the add comment section --------- */
+#add-comment {
+    background-color: rgb(197, 197, 197);
+    border-radius: 0.25em;
+    width: 80vw;
+    max-width: 830px;
+}
+
+/* styling the text entry box */
+#comment-textbox {
+    font-size: 1em;
+    margin: 0.6em 1em;
+    border-style: none;
+    border-radius: 8px;
+    padding: 0.5em 0.9em;
+    width: 76vw;
+    max-width: 800px;
+    height: 5em;
+}
+
+#add-comment-buttons {
+    padding: 0.5em 1em;
+}
+
+#add-comment-buttons button {
+    border-style: none;
+    border-radius: 0.25em;
+    color: rgb(255, 254, 254);
+    background-color: var(--background-primary);
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+/* ---------- Commeent section styling ----------  */
+/* every comment has the same formatting */
+.individual-comment  {
+    background-color:var(--background-tertiary);
+    border-radius: 0.25em;
+    padding: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 75vw;
+    max-width: 920px;
+}
+
+/* styling the data bar */
+.individual-comment header {
+    display: flex;
+    background-color: var(--background-primary);
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    font-size: 1em;
+}
+
+/* styling the data icons */
+.individual-comment img {
+    /* giving a white background and space around 
+    for better visibility of all the data icons*/
+    background-color: rgb(255, 255, 255);
+    margin: 0.2em 0.2em;
+    padding: 0.1em 0.1em;
+    border-radius: 0.1em;
+    width: 2em;
+    height: 2em;
+}
+
+.individual-comment header p {
+    margin: 0.5em 0.5em;
+}
+
+.individual-comment main p {
+    margin: 0 0;
+    padding: 1em 2em;
+}
+
+/* My QUICK solution to a hierarchical comment render, 
+   with more time I will use JS to indent the comments according the depth ID */
+.comment-depth-0 {
+    margin-left: 0vw;
+}
+
+.comment-depth-1 {
+    margin-left: 5vw;
+}
+
+.comment-depth-2 {
+    margin-left: 10vw;
+}
+
+.comment-depth-3 {
+    margin-left: 15vw;
+    width: 70vw;
+    /* preventing page overflow */
+    max-width: 880px;
+}
+
+/* Articles styling ---------- */
+figure[id*="hero-background"]
+{
+    /* The background image takes priority, shoud a error occur the backgroundcolour will be uesed. */
+    background-color: var(--background-primary);
+    background-image: url("../Media/home-herospace-resized.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* styling the header */
+    color: var(--font-colour-primary);
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding-top: 7rem;
+    padding-bottom: 15rem;
+}
+
+/* styling the possible extra article media */
+#article-media iframe {
+    width: 33%;
+    height: 16vw;
+    margin: 5px 33%;  
+}
+#article-media img {
+    width: 60%;
+    height: 16vw;
+    margin: 5px 20%;  
+}
+
+/* --------- Screen specific styling ---------- */
+/* Only overwriting the nessesary styling to fit all the content */
+/*Mobile-------------------------------------*/
+@media only screen and (max-width: 570px){
+    /* orientating the nav bar vertically and centered */
+    .nav-class {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* smaller hero image with smaller spacing to fit the heading */
+    #hero-background {
+        height: 300px;
+        padding-top: 50px;
+    }
+
+    /* removing the spacing used for the desktop size  */
+    #search-box {
+        padding: 0.5em 0.9em;
+        margin: 0 0;
+    }
+
+    #hero-background h1 {
+        font-size: 1em;
+    }
+    #hero-background p {
+        font-size: 0.5em;
+    }
+
+    /* the interactive part of the article preview gets full width */
+    div[id*="article-active-area"] {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* spacing to incoporate the possible accessibility text size increase, 
+       won't look prity but it works */
+    .art-final-head {
+        padding-top: 1%;
+    }
+    
+    /* spacing to incoporate the possible accessibility text size increase, 
+    won't look prity but it works */
+    .art-final-para {
+        padding-bottom: 20%;
+        padding-right: 10px;
+    }
+
+    /* styling all divs regardless of the specific IDs */
+    div[id*="article-final"] {
+        /* smaller width for some spacing all round */
+        width: 80%;
+        height: 50vw;
+        min-height: 330px;
+    }
+
+    /* Switching the metabar to the bottom */
+    .meta-bar {
+        /* Formatting for the conetnet of the meta-bar */
+        display: flex;
+        /* now a horizontal orientation */
+        flex-direction: row;
+        justify-content: space-around;
+    
+        /* somehow stiky works and not relative */
+        position: sticky;
+        /* locating teh bar to the bottm */
+        bottom: 0px;
+        left: 0px;
+        height: 5%;
+        /* min height to keep space for the data icons */
+        min-height: 60px;
+        width: 100%;
+    
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.25em;
+        border-bottom-left-radius: 0.25em;
+    }
+    
+    /* styling the data labels */
+    .meta-bar p {
+        float: right;
+        margin-left: 0.2em;
+        margin-top: 0.4em;
+    }
+    
+    /* styling the icons */
+    .meta-bar img {
+        width: 2em;
+        margin-top: 0.06em;
+    }
+
+    /* ---------- article pages ---------- */
+    /* resizing the hero background header */
+    figure[id*="hero-background"]
+    {
+        font-size: 1em;
+    }
+
+    /* resisizng any media the specific article might need */
+    #article-media iframe {
+        width: 70%;
+        height: 34vw;
+        margin: 5px 15%;  
+    }
+    #article-media img {
+        width: 95%;
+        height: auto;
+        margin: 5px 2.5%;  
+    }
+
+    /* styling the about page background size and header */
+    #hero-background-aboutpage {
+        background-size: 300px;
+    }
+
+    #hero-background-aboutpage h1 {
+        font-size: 1em;
+    }
+}
+
+
+/*Tablet-------------------------------------*/
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    /* orientating the nav bar vertically and centered */
+    .nav-class {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* removing the spacing used for the desktop size  */
+    #search-box {
+        padding: 0.5em 0.9em;
+        margin: 0 0;
+    }
+
+    /* smaller hero image with smaller spacing to fit the heading */
+    #hero-background {
+        height: 500px;
+        padding-top: 50px;
+        padding-bottom: 15rem;
+
+    }
+
+    #hero-background h1 {
+        font-size: 1.2em;
+    }
+    #hero-background p {
+        font-size: 0.7em;
+    }
+
+    /* the interactive part of the article preview gets full width */
+    div[id*="article-active-area"] {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* spacing to incoporate the possible accessibility text size increase, 
+       won't look prity but it works */
+    .art-final-head {
+        padding-top: 1%;
+    }
+    
+    .art-final-para {
+        padding-bottom: 25%;
+        padding-right: 10px;
+    }
+
+    /* styling all divs regardless of the specific IDs */
+    div[id*="article-final"] {
+        /* smaller width for some spacing all round */
+        width: 80%;
+        height: 50vw;
+        min-height: 330px;
+    }
+
+    /* Switching the metabar to the bottom */
+    .meta-bar {
+        /* Formatting for the conetnet of the meta-bar */
+        display: flex;
+        /* now a horizontal orientation */
+        flex-direction: row;
+        justify-content: space-around;
+
+        /* somehow stiky works and not relative */
+        position: sticky;
+        /* locating teh bar to the bottm */
+        bottom: 0px;
+        left: 0px;
+        height: 5%;
+        /* min height to keep space for the data icons */
+        min-height: 60px;
+        width: 100%;
+    
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.25em;
+        border-bottom-left-radius: 0.25em;
+    }
+    
+    /* styling the data labels */
+    .meta-bar p {
+        float: right;
+        margin-left: 0.2em;
+        margin-top: 0.4em;
+    }
+    
+    /* styling the icons */
+    .meta-bar img {
+        width: 2em;
+        margin-top: 0.06em;
+    }
+
+    /* ---------- article pages ---------- */
+    /* resizing the hero background header */
+    figure[id*="hero-background"] {
+        font-size: 1.2em;
+        height: 300px;
+    }
+
+    /* resisizng any media the specific article might need */
+    #article-media iframe {
+        width: 60%;
+        height: 29vw;
+        margin: 5px 20%;  
+    }
+    #article-media img {
+        width: 90%;
+        height: auto;
+        margin: 5px 5%;  
+    }
+
+    /* styling the about page background size and header */
+    #hero-background-aboutpage {
+        background-size: 300px;
+    }
+
+    #hero-background-aboutpage h1 {
+        font-size: 1.2em;
+    }
+}
+
+/*Desktop-------------------------------------*/
+@media only screen and (min-width: 1011px){
+    /* The responsive design is desktop first!
+       So, all the styling above the media quireys is for the desktop size */
+}
+
+/* ---------- About styling ---------- */
+#hero-background-aboutpage {
+    background-color: var(--background-primary);
+    background-image: url("../Media/about-herospace.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-size: 2em;
+    text-align: center;
+    padding-top: 7rem;
+    padding-bottom: 15rem;
+}
+
+/* adding some space around the content */
+#about-content-section {
+    padding: 5vh 10vw;
+    text-align: center;
+}

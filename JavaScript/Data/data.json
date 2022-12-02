@@ -1,0 +1,207 @@
+articles_database = {
+    "articles": [
+        {
+            "id": "0",
+            "heading": "GPU Prices keep falling",
+            "intro": "GPU prices are not slowing down. Things can get very intresting with a flod of old and new stock.",
+            "media": "<img src='../Media/AMD-and-Nvidia-GPU-Pricing-Trend-v4.jpg'>",
+            "main-article": "Graphics card prices at the start of August 2022 are once again lower than the prior month, though the rate of decrease has slowed down. We've pulled together the data for the current prices, both at retail and on eBay, for the best graphics cards and all the latest GPUs in our GPU benchmarks hierarchy. eBay prices fell by 6% on average since July 1, and prices on previous-gen cards dropped by 8% on average. Perhaps more interestingly, retail prices also dropped by 7% on average, with several GPUs showing double-digit decreases. <br> <br> There's a strong correlation between graphics card prices and mining profitability, and there's some minor concern with the slow rebound in cryptocurrency prices over the past month. Mining profitability improved somewhat, though even the RTX 3090 and RTX 3090 Ti only average about $2.50 per day. Bitcoin bottomed out at just under $18,000 in mid-June, and now sits at just over $23,000. Ethereum likewise hit a low of less than $900 on June 18, and has since rebounded to roughly $1,700. Will they maintain those levels? That's the billion-dollar question. <br> <br> If you're willing to take a chance on eBay, nearly every GPU now sells below its official MSRP. There are only three exceptions, Nvidia's RTX 3060 Ti, RTX 3060, and RTX 3050. The most expensive GPUs are even selling 20–35% below MSRP, joined by the RX 6600 XT, RX 6600 and RX 6500 XT. <br> <br> Retail prices aren't significantly worse, either, and you get the peace of mind that comes with purchasing a brand-new GPU. Only the RTX 3080 down to the RTX 3050 are selling above MSRP, with about a 10% markup on the RTX 3080 and RTX 3070 Ti, and a 20% markup on the other three GPUs. The RTX 3080 12GB incidentally can actually be had for less than the 10GB card and generally delivers 5–10% higher performance. <br> <br> While Nvidia still has a few cards sticking above MSRP, AMD's GPUs are all well below MSRP if you go through eBay, and only the RX 6800 XT and RX 6800 are selling at MSRP if you want to buy a new card at retail. You could argue that some of AMD's GPUs had a higher than warranted MSRP to begin with, but the same goes for certain Nvidia cards. Still, AMD's eBay prices are typically around 20% below MSRP right now, or 10% below MSRP at retail. <br> <br> In terms of best value, looking at FPS per dollar spent and using eBay prices, it's hard to beat the RX 6600 and RX 6600 XT. Those sit at about 0.28 FPS/$, and the next closest GPU is the RX 6700 XT at 0.24 FPS/$. Nvidia's best values are the RTX 3060, RTX 3060 Ti, and RTX 3070, all of which land in the 0.20–0.21 range. Or if you're okay with a previous generation card, the RX 5600 XT currently takes top honors at 0.30 FPS/$ — and most of Nvidia's RTX 20-series GPUs are a better value than the RTX 30-series. <br> <br> If you want more performance than the GPUs offer, you'll end up with diminishing returns, though factoring in the cost of the rest of your gaming PC changes the dynamics a bit. We used an estimated price of $750 for the rest of the PC, which means on a system level your best value would come from a more expensive GPU, with the RX 6800 XT taking top honors, followed closely by the RX 6900 XT, RX 6800, RX 6950 XT, and RX 6700 XT. Food for thought. <br> <br> Looking just at eBay pricing, GPU prices dropped by 6% compared to last month, which means the rate of decrease has slowed down. (July vs. June prices showed a 14% drop.) The RX 6400 is the only card that went up in eBay pricing, but it's almost $20 cheaper at retail right now so it hardly counts — plus there were only seven such cards sold on eBay throughout July. <br> <br> The average GPU price for all cards sold on eBay last month is $575, compared to $614 in June. Nvidia's average GPU price on eBay was slightly higher at $623 ($658 in June), with AMD's average price sitting at $399 (versus $435 in June). Despite the higher prices, Nvidia outsold AMD by a 3.68 to 1 ratio. We'd expect somewhat similar margins at retail, but unfortunately, we don't have direct access to such data.",
+            "imageURL": "RTX3090-wallpaper.png",
+            "img-alt-txt": "descriptive text",
+            "url": "gpu-article.html",
+            "metadata": {
+                "author": "Jones568", 
+                "date": "12-08-2022",
+                "chats": "20"
+            },
+            "chat": [
+                {"comment": {
+                    "author": "GUSter",
+                    "date": "12-08 ",
+                    "depth": "0",
+                    "text": "FINALLY, I have been waiting for ages to get a proper machine. Now I just have to wait a bit longer for lower prices still...",
+                    "sub_comments": [
+                        {
+                            "comment": {
+                                "author": "---Huja---",
+                                "date": "13-08 ",
+                                "depth": "1",
+                                "text": "I know what you feel, I've been saving and waiting to build a moster. Now is the guestion of how monsterous the machine should be.",
+                                "sub_comments": [
+                                    {"comment": {
+                                        "author": "Monitorus",
+                                        "date": "12-08 ",
+                                        "depth": "2",
+                                        "text": "Me too, I finally want a beast that can rip up anything I can throw at it.",
+                                        "sub_comments": [{"comment": {
+                                            "author": "emil456",
+                                            "date": "12-08 ",
+                                            "depth": "3",
+                                            "text": "What will be the specks of your machine then?",
+                                            "sub_comments": []}
+                                    }]}
+                                },{"comment": {
+                                    "author": "coolHere",
+                                    "date": "12-08 ",
+                                    "depth": "2",
+                                    "text": "Its a ballancing and waiting game combined. As always. Get the cheapest possible product or have somehting now. That is the question.",
+                                    "sub_comments": []}
+                            }]
+                        }}]
+                }
+            },
+            {"comment": {
+                "author": "Cool365",
+                "date": "12-08 ",
+                "depth": "0",
+                "text": "My plans are to have a very very nice machine for 3D work. I'm thinking quad GPU with dual bridges and A thread ripper. With the current prices, I think the GPUs might be the cheapest part of my build.",
+                "sub_comments": [
+                    {"comment": {
+                            "author": "Techster",
+                            "date": "12-08 ",
+                            "depth": "1",
+                            "text": "Just leave some GPUs for us.",
+                            "sub_comments": []}
+                    },
+                    {"comment": {
+                         "author": "matrix123",
+                         "date": "12-08 ",
+                         "depth": "1",
+                         "text": "Nice, same here. finally the horse power I need to work.",
+                         "sub_comments": []}
+                     }]
+            }}
+            ]
+        },
+
+        {
+            "id": "1",
+            "heading": "RED vs BLUE",
+            "intro": "The ever entertainng debate: who is better: team red with AMD or team blue with Intel. Join us as we try to settile this argument once and for all.",
+            "media": "",
+            "main-article": "If you're looking for the best CPUs for Gaming or the best workstation CPU, there are only two choices to pick from – AMD and Intel. That fact has spawned an almost religious following for both camps, and the resulting AMD vs Intel flamewars make it tricky to get unbiased advice about the best choice for your next processor. But in many cases, the answer is actually very clear. In fact, for most users, it's now a blowout win in Intel's favor, as you can see in our CPU Benchmarks Hierarchy. That's a fast reversal of fortunes for the chipmaker after its decade of dominance was completely overturned by AMD's Ryzen 5000 chips. It also gives Intel a leg up as we head into the Raptor Lake and Zen 4 Ryzen 7000 era. <br> <br> This article covers the never-ending argument of AMD vs Intel desktop CPUs (we're not covering laptop or server chips). We judge the chips on seven criteria based on what you plan to do with your PC, pricing, performance, driver support, power consumption, and security, giving us a clear view of the state of the competition. We'll also discuss the lithographies and architectures that influence the moving goalposts. Overall, there's a clear winner, but which CPU brand you should buy depends mostly on what kind of features, price, and performance are important to you. <br> <br> If you're looking for the fastest overall chips on the market, you should look to Intel's potent new Alder Lake series. Even though AMD clings to the distinction of having the single fastest gaming chip available, Intel's Alder Lake chips take the gaming crown from AMD in all of the most important price bands. Alder Lake also rivals or beats AMD in all meaningful performance metrics, like single- and multi-threaded productivity workloads. You can see the disruptive results in our Intel Core i9-12900K and Core i5-12600K review, and we've also added both our Windows 10 and 11 testing to our CPU benchmark database. We've also thrown in results with both DDR4 and DDR5 memory for good measure. <br> <br> Intel's Alder Lake has completely redefined x86 desktop PC chips with a new hybrid architecture that delivers amazing levels of performance. Not to be upstaged, AMD released its Ryzen 7 5800X3D, a new CPU with 3D V-Cache. This chip takes the overall leadership spot for gaming, if only by a slight percentage, courtesy of an almost-unthinkable 96MB of L3 cache bolted onto the souped-up processor. <br> <br> You can see how all of these processors stack up in our AMD vs Intel CPU Benchmarks Hierarchy, but the landscape had changed in the wake of AMD's Ryzen 9 5950X and Ryzen 9 5900X, not to mention the Ryzen 5 5600X. At their debut, the Ryzen 5000 series were the highest-performing chips on the market and beat Intel in every metric that matters, including gaming, application performance, power consumption, and thermals, but Intel's successful Alder Lake counterattack swung the tables in Team Blue's favor.  <br> <br> AMD recently released six other new Zen 3 chips to shore up its defenses against Alder Lake, but we've found that they don't impact the competitive positioning much. AMD also has its Zen 4 Ryzen 7000 chips coming before the end of September. Intel also has its Raptor Lake chips coming, and they're expected in October. That means the AMD vs Intel battle could shift very soon, but this is the tale of the tape for the current state of the market.",            "image": "Pen-3-icon.png",
+            "img-alt-txt": "descriptive text",
+            "imageURL": "AMD_vs_Intel-1.jpg",
+            "url": "rvb-article.html",
+            "metadata": {
+                "author": "Mr. Code", 
+                "date": "12-08-2022",
+                "chats": "12"
+            },
+            "chat": [
+                {"comment": {
+                    "author": "Toms tech",
+                    "date": "12-08 ",
+                    "depth": "0",
+                    "text": "I like team blue, age beats new tech.",
+                    "sub_comments": [
+                        {
+                            "comment": {
+                                "author": "noobie101",
+                                "date": "12-08 ",
+                                "depth": "1",
+                                "text": "Same here, love that they are older and more experienced!",
+                                "sub_comments": [
+                                    {"comment": {
+                                        "author": "techUP-user",
+                                        "date": "12-08 ",
+                                        "depth": "2",
+                                        "text": "not nesesharily more experienced",
+                                        "sub_comments": []}
+                                }]
+                        }},
+                           {"comment": {
+                                "author": "unknown",
+                                "date": "15-08 ",
+                                "depth": "1",
+                                "text": "your right, Intel has ben the leader for longer, they have much more experience in the long run. really hope they come out on top",
+                                "sub_comments": []}
+                            }]
+                }
+            },
+            {"comment": {
+                "author": "RED-warning",
+                "date": "10-08 ",
+                "depth": "0",
+                "text": "AMD is the new, new methods and inovation with fresh blood and ideas. Intel does not stand a change with the force that it is up against",
+                "sub_comments": [
+                    {"comment": {
+                            "author": "life-is-life",
+                            "date": "11-08 ",
+                            "depth": "1",
+                            "text": "AMD is and stays better, this argument can not be settled here in chats. We have to find a big field and fight it out old school style. That is the oly way to solve the problem!",
+                            "sub_comments": []}
+                    }]
+            }}
+            ]
+        },
+
+        {
+            "id": "2",
+            "heading": "All things Cyber",
+            "intro": "Cyber space never sleeps. Here we discus everything cybersecurity related. All the latest exploits, zero-days and bugs.",
+            "main-article": "The zero-day industry is rapidly growing, and the West was not prepared for the pace at which adversaries are catching up. Meanwhile, former US government employees do not shy away to profit from questionable buyers, and tech companies persistently avoid any regulation. <br> <br> According to Nicole Perlroth, a cybersecurity journalist for the New York Times, the cyber arms industry has sprawled around the globe, with only Antarctica lacking an appetite for surveillance and espionage technology. <br> <br> 'This industry went from one that was really Western-dominated to one that was drifting to corners of the world where we didn't see it coming. And these other countries were seeing a huge benefit to purchasing these tools off the shelf,' she said during a webinar by the Center for Strategic & International Studies (CSIS) on her latest book, 'This is How They Tell Me the World Ends.' <br> <br> Her recent work focuses on the zero-day vulnerability industry. Governments and private individuals partake in the trade of information on software flaws and tools to detect and maintain them. When you hear of a zero-day attack, think of the Solarwinds hack that allowed threat actors access to dozens of US agencies, including the Pentagon. <br> <br> Perlroth claims that it was clear that countries and people actively trade in zero-day capabilities since Snowden documents were leaked. However, it was not entirely clear who is selling what and where. A long-standing notion of the US's supremacy in the industry could face challenges as the trade in zero-day exploits has outgrown the States. <br> <br> One of Perlroth's contacts for the book explained that a time when hackers were selling zero-day exploits only to the Pentagon or other government agencies is primarily gone. Every government on Earth has realized the potential of having an arsenal of zero-day exploits. <br> <br> 'Some of them are countries you would never suspect in looking for zero-day exploits to add to their arsenal. I was able to get contract proposals for Finland. Whoever thought Finland would be buying spyware, but of course, they share a border with Russia, and Russia has been nibbling across the border,' Perlroth said. <br> <br> In the wrong hands She argues that lack of zero-day supervision creates macabre situations where tools developed by the US or other Five Eyes members are later used to spy on and persecute civil rights activists or other individuals deemed dangerous. <br> <br> For example, an ally of the US, the United Arab Emirates, Perlroth claims, uses spyware developed by the NSA and controlled by former NSA agents in Abu Dhabi to spy on Twitter critics or hack neighboring countries' agencies. <br> <br> 'These are former NSA hackers sitting in a villa in Abu Dhabi, reading Michelle Obama's emails. There's something deeply wrong with that, but there were also no rules, at least in the UAE, prohibiting them from doing so,' Perlroth explained. <br> <br> Since there are virtually no rules of engagement when it comes to zero-day exploits, the US finds itself in a tricky situation at times. For example, an NSA developed spyware was used on Ahmed Mansoor, a famous UAE's human rights activists' phone. <br> <br> 'These capabilities are going to countries that are using them for hardcore surveillance in a way that we likely never would. And that's worth calling out and probably having some discussions around whether we should talk about who we can and cannot sell these tools and tradecraft to,' Perlroth said.",
+            "imageURL": "cpu-city.jpg",
+            "img-alt-txt": "descriptive text",
+            "media": " <iframe src='https://www.youtube.com/embed/y62VT-Fnsp4' title='A Conversation with Nicole Perlroth, 'This is How They Tell Me the World Ends''></iframe>",
+            "url": "cyber-article.html",
+            "metadata": {
+                "author": "Dr. Cyber360", 
+                "date": "08-08-2022",
+                "chats": "7"
+            },
+            "chat": [
+                {"comment": {
+                    "author": "---huja---",
+                    "date": "08-08 ",
+                    "depth": "0",
+                    "text": "We have to mack palns, thigs are relly getting out of controle. I deally the government will start a agency to ensure fast and reliable fixing",
+                    "sub_comments": [
+                        {
+                            "comment": {
+                                "author": "techUP-user",
+                                "date": "9-08 ",
+                                "depth": "1",
+                                "text": "That is a great idea, we just have to get all the paper work done and that should be all. Great idea",
+                                "sub_comments": [
+                                    {"comment": {
+                                        "author": "techster365",
+                                        "date": "9-08 ",
+                                        "depth": "2",
+                                        "text": "Hate to break your bubble, but your plan wont work...",
+                                        "sub_comments": []}
+                                },{"comment": {
+                                    "author": "unknown",
+                                    "date": "9-08 ",
+                                    "depth": "2",
+                                    "text": "I'm sceptical if that is the best way to ensure zero-days are fixed in time. Don't know, there has to be a better way of doing things.",
+                                    "sub_comments": []}
+                            }]
+                        }}]
+                }
+            },
+            {"comment": {
+                "author": "Zoro",
+                "date": "20-08 ",
+                "depth": "0",
+                "text": "We have to do something and fast. For example: Defcon talks and comunities are always discovering new threats and talking about it, but is someone doing something about it, NO. ",
+                "sub_comments": [
+                    {"comment": {
+                            "author": "unknown-365",
+                            "date": "20-08 ",
+                            "depth": "1",
+                            "text": "to add to your comment. there are many more places where fresh vunrabilities are discused and handled. Not just defcon.",
+                            "sub_comments": []}
+                    },
+                    {"comment": {
+                         "author": "internet-user",
+                         "date": "21-08 ",
+                         "depth": "1",
+                         "text": "You are onto soemthing, there are few places that have publicity like Defcon. we just have to use that publicity to sracre the companies into action. So, lets go harder and get all we know out there.",
+                         "sub_comments": []}
+                     }]
+            }}
+            ]
+        }
+    ]
+}

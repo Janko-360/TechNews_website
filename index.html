@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- setting all necessary metadata -->
+        <meta name="author" content="Janko Bauer">
+        <meta name="description" content="Socialising on everything tech">
+        <meta name="keywords" content="tech, tech news, tech chat, nerd chat, fun tech, technology news, technology">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        
+        <!-- Imports -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="../CSS/general-styles.css">
+        <!-- main script -->
+        <script src="../JavaScript/scripts.js"></script>
+        <!-- local handlebars import -->
+        <script src='../JavaScript/Libraries/handlebars.min-v4.7.7.js'></script>
+        <!-- JSON import as a variable -->
+        <script src="../JavaScript/Data/data.json"></script>
+        
+        <!-- Title for labeling the tab and is used for identifying the page in the JS code -->
+        <title>TechUP | Home</title>
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <!-- This must be a div to allow flexbox layout -->
+                <div class = "nav-class">
+                    <div class = "active">
+                        <!-- Logo link home -->
+                        <a href="index.html"><img src="../Media/logo.png"  id = "logo-link" alt="Tech Up logo"></a>
+                    </div>
+                    <!-- About page link -->
+                    <div><a href="about.html">About Us</a></div>
+                    <!-- Non functioning search box -->
+                    <div><input id="search-box" type="text" placeholder="Search..."></div>
+                    <!-- Accessibility menu -->
+                    <!-- Code was adapted from https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+                    <div class="access-menu-dropdown">
+                    <button onclick="dropdownToggle()" class="drop-btn right-nav">Accessibility &#x25BC;</button>
+                    <div id="accessDrop" class="dropdown-content">
+                      <!-- Select a text size -->
+                      <label for="text-size-small">Small</label> 
+                      <label for="text-size-med">Medium</label>
+                      <label for="text-size-large">Large</label> <br>
+                      <input type="radio" id="text-size-small" class="text-radio" name="text-size-select" title="Select small text size" value="small" onclick="changeTextSize(value)">
+                      <input type="radio" id="text-size-med" class="text-radio" name="text-size-select" title="Select medium text size" value="med" onclick="changeTextSize(value)">
+                      <input type="radio" id="text-size-large" class="text-radio" name="text-size-select" title="Select large text size" value="large" onclick="changeTextSize(value)">
+                      <br>
+                      <!-- Select a colour theme -->
+                      <label for="theme-colour">Colour</label>
+                      <label for="theme-black">High-contrast</label> <br>
+                      <input type="radio" id="theme-colour" class="text-radio" name="theme-select" title="Select colourful theme" value="normal" onclick="changeTheme(value)">
+                      <input type="radio" id="theme-black" class="text-radio" name="theme-select" title="Select high constast theme" value="high-cont" onclick="changeTheme(value)">
+                      <br>
+                      <!-- Change the focus element highlight -->
+                      <label for="focus-toggle">Strong Focus</label>
+                      <input type="checkbox" id="focus-toggle" name="focus-toggle" title="Stronger hilight for tabbing" onclick="changeFocus(checked)">
+                    </div>
+                  </div>
+                </div>
+            </nav>
+            <!-- The big focus grabbing image, heading and intro paragraph -->
+            <figure id = "hero-background">
+                <h1>Welcome to TechUP</h1>
+                <p>Here you can quench all your tech needs</p>
+            </figure>
+        </header>
+
+        <!-- All information content is in here -->
+        <main id="content-section">
+            <!-- This will be populated with Handlebars -->
+            <span id="target"></span>
+            <!-- The script that executes with handlebars -->
+            <script id="article-template" type="text/x-handlebars-template">
+                <!-- The each allows iteration over all articles in the JSON file, allowing near limitless article previews -->
+                {{#each articles}} 
+                <div id = "article-final-{{id}}" >  <!-- the id in handlebars brackets allows for custom html identifiers -->
+                        <!-- Handlebars fils is the heading, into and main paragraph with the data from the JSON file -->
+                        <h2 class="art-final-head">{{heading}}</h2>
+                        <p class="art-final-para">{{{intro}}}</p>
+                        <p class="art-final-body">{{{main-article}}}</p> 
+
+                        <!-- the link to the respective webpage -->
+                        <a class="article-links" href="{{url}}"> <!-- the URL will be filled in by handlebars -->
+                            <!-- NB overlay div to control mouse interactions with the article sapce -->
+                            <!-- - mouseover starts the article scroll -->
+                            <!-- - mouseout ends the animation timer and resets all text location values -->
+                            <div id = "article-active-area-{{id}}" 
+                                onmouseover="preview_scroll_up({{id}})" 
+                                onmouseout="preview_scroll_reset({{id}})"> <!-- NB the odd ID foration as parameters might result in erros but 
+                                                                                once Handlebars compiles and populates everything will work-->
+                            </div>
+                        </a>
+                        
+                        <!-- The metadata bar with the icons and labels -->
+                        <aside class = "meta-bar">
+                            <div class = "meta-goup">
+                                <img src="../Media/Icons/Pen-3-icon.png">
+                                <p>{{metadata.author}}</p>
+                            </div>
+                            <div class = "meta-goup">
+                                <img src="../Media/Icons/Time-And-Date-Calendar-icon.png">
+                                <p>{{metadata.date}}</p>
+                            </div>
+                            <div class = "meta-goup">
+                                <img src="../Media/Icons/Speach-BubbleDialog-icon.png">
+                                <p>{{metadata.chats}}</p>
+                            </div>
+                            <div class = "meta-goup">
+                                <a href = "#"><img src="../Media/Icons/Arrows-Right-2-icon.png"></a>
+                            </div>
+                        </aside>
+                </div> 
+                {{/each}}
+            </script>
+
+            <!-- The section showing the first chats starts -->
+            <section class="top-chats">
+                <h2>Top Thoughts</h2>
+                <!-- This is will be populated with the results from handlebars -->
+                <span id="home-comment-target"></span>
+                <!-- The script JS executes to get all comments -->
+                <script id="home-top-comments" type="text/x-handlebars-template">  
+                     <!-- first we look in all articles -->
+                    {{#each articles}}
+                    <h3>{{heading}}</h3> <!-- some separation from comment groups-->
+                    <!-- Here we look at all the first comments -->
+                    {{#each chat}}
+                        <section class="individual-comment home-comment"> <!-- home comment is used to seperate these from the article page commnets-->
+                            <!-- teh header with the metadata -->
+                            <header>
+                                <img src="../Media/Icons/Pen-3-icon.png">
+                                <p>{{comment.author}}</p>
+                                <img src="../Media/Icons/Time-And-Date-Calendar-icon.png">
+                                <p>{{comment.date}}</p>
+                            </header>
+                            <!-- the actual comment text -->
+                            <main>
+                                <p>{{comment.text}}</p>
+                            </main>
+                        </section>
+                    {{/each}}
+                    {{/each}}
+                </script>
+            </section>
+        </main>
+
+        <footer>
+            <!-- first column for some extra info
+                 all links go back to the top of the document -->
+            <ul>
+                <li><h2>More</h2></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Career</a></li>
+            </ul> 
+            <br>
+            <!-- second column with "links" to social media -->
+            <ul>
+                <li><h2>Connect with us</h2></li>
+                <li><a href="#"><img src="../Media/Icons/Linkedin-icon.png" alt="Black lines LinkedIn Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Twitter-icon.png" alt="Black lines Twitter Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Social-Networks-Stackoverflow-icon.png" alt="Black lines Stackoverflow Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Youtube-icon.png" alt="Black lines YouTube Logo"></a></li>
+            </ul>
+            <br>
+            <!-- final column with additional "links" -->
+            <ul>
+                <li><h2>Privacy</h2></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Our Privacy effort</a></li>
+            </ul>
+            <p class="legal-info" id="artist-info">Icon Artists: </p>
+            <p class="legal-info"><a href="http://www.iconsmind.com">IconsMind</a></p>
+            <p class="legal-info"><a href="http://icons8.com">Icons8</a></p>
+            <p id = "copyright-para">Copyright © 2022 TechUP. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

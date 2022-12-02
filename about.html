@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- setting all necessary metadata -->
+        <meta name="author" content="Janko Bauer">
+        <meta name="description" content="Socialising on everything tech">
+        <meta name="keywords" content="tech, tech news, tech chat, nerd chat, fun tech, technology news, technology">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        
+        <!-- Imports -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="../CSS/general-styles.css">
+        <!-- main script -->
+        <script src="../JavaScript/scripts.js"></script>
+        <!-- local handlebars import -->
+        <script src='../JavaScript/Libraries/handlebars.min-v4.7.7.js'></script>
+        <!-- JSON import as a variable -->
+        <script src="../JavaScript/Data/data.json"></script>
+        
+        <!-- Title for labeling the tab and is used for identifying the page in the JS code -->
+        <title>TechUP | About</title>
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <!-- This must be a div to allow flexbox layout -->
+                <div class = "nav-class">
+                    <div class = "active">
+                        <!-- Logo link home -->
+                        <a href="index.html"><img src="../Media/logo.png"  id = "logo-link" alt="Tech Up logo"></a>
+                    </div>
+                    <!-- About page link -->
+                    <div><a href="about.html">About Us</a></div>
+                    <!-- Non functioning search box -->
+                    <div><input id="search-box" type="text" placeholder="Search..."></div>
+                    <!-- Accessibility menu -->
+                    <!-- Code was adapted from https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+                    <div class="access-menu-dropdown">
+                    <button onclick="dropdownToggle()" class="drop-btn right-nav">Accessibility &#x25BC;</button>
+                    <div id="accessDrop" class="dropdown-content">
+                      <!-- Select a text size -->
+                      <label for="text-size-small">Small</label> 
+                      <label for="text-size-med">Medium</label>
+                      <label for="text-size-large">Large</label> <br>
+                      <input type="radio" id="text-size-small" class="text-radio" name="text-size-select" title="Select small text size" value="small" onclick="changeTextSize(value)">
+                      <input type="radio" id="text-size-med" class="text-radio" name="text-size-select" title="Select medium text size" value="med" onclick="changeTextSize(value)">
+                      <input type="radio" id="text-size-large" class="text-radio" name="text-size-select" title="Select large text size" value="large" onclick="changeTextSize(value)">
+                      <br>
+                      <!-- Select a colour theme -->
+                      <label for="theme-colour">Colour</label>
+                      <label for="theme-black">High-contrast</label> <br>
+                      <input type="radio" id="theme-colour" class="text-radio" name="theme-select" title="Select colourful theme" value="normal" onclick="changeTheme(value)">
+                      <input type="radio" id="theme-black" class="text-radio" name="theme-select" title="Select high constast theme" value="high-cont" onclick="changeTheme(value)">
+                      <br>
+                      <!-- Change the focus element highlight -->
+                      <label for="focus-toggle">Strong Focus</label>
+                      <input type="checkbox" id="focus-toggle" name="focus-toggle" title="Stronger hilight for tabbing" onclick="changeFocus(checked)">
+                    </div>
+                  </div>
+                </div>
+            </nav>
+            <!-- The big focus grabbing image, heading and intro paragraph -->
+            <figure id = "hero-background-aboutpage">
+                <h1>We deliver all your tech news</h1>
+            </figure>
+        </header>
+
+        <!-- all about text is in this main tag. -->
+        <main id="about-content-section">
+            <h2>About us</h2>
+            <h3>Vision</h3>
+            <p>We aim to deliver top quality content, discussion material and a mode of communications. 
+                To help likeminded people connect and share their ideas. Have trustworthy articles that 
+                inspire greatness. <br> since our priority is you.</p>
+
+            <h3>Misssion</h3>
+            <p>We aim to achieve our mission by means of trust and transparency. We are on the constant lookout 
+                for the finest writing talent and most knowledgeable individuals. With tireless effort to provide 
+                a robust communications platform, we are certain that we as a community will grow and flourish as 
+                a tech enthusiasts. </p>
+            <br> 
+            <p>Thank you for joining our community</p>
+        </main>
+
+        <footer>
+            <!-- first column for some extra info
+                 all links go back to the top of the document -->
+            <ul>
+                <li><h2>More</h2></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Career</a></li>
+            </ul> 
+            <br>
+            <!-- second column with "links" to social media -->
+            <ul>
+                <li><h2>Connect with us</h2></li>
+                <li><a href="#"><img src="../Media/Icons/Linkedin-icon.png" alt="Black lines LinkedIn Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Twitter-icon.png" alt="Black lines Twitter Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Social-Networks-Stackoverflow-icon.png" alt="Black lines Stackoverflow Logo"></a></li>
+                <li><a href="#"><img src="../Media/Icons/Youtube-icon.png" alt="Black lines YouTube Logo"></a></li>
+            </ul>
+            <br>
+            <!-- final column with additional "links" -->
+            <ul>
+                <li><h2>Privacy</h2></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Our Privacy effort</a></li>
+            </ul>
+            <p class="legal-info" id="artist-info">Icon Artists: </p>
+            <p class="legal-info"><a href="http://www.iconsmind.com">IconsMind</a></p>
+            <p class="legal-info"><a href="http://icons8.com">Icons8</a></p>
+            <p id = "copyright-para">Copyright © 2022 TechUP. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
